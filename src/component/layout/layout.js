@@ -90,6 +90,7 @@ const Layout = (props) => {
         }
         const styleRes = await serverV1Instance.post('/usertheme/create', payload);
         if (styleRes.status === 200) {
+            setConfig(true)
             toast.success("theme saved !", {
                 position: toast.POSITION.TOP_RIGHT
             });
